@@ -1,0 +1,154 @@
+header{
+    position: relative;
+    position: sticky;
+    top: 0; 
+    .video-background {
+    position: static;
+    position: absolute;
+    top: -2%;
+    max-width: 100%;
+    max-width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+}
+
+.secbutton{
+    @include button;
+    width: 250px;
+    margin: 0 15px 0 0;   
+}
+
+button:hover{
+    box-shadow: 0 0 25px var(--butbg);
+    scale: 1.05;
+}
+
+button:active{
+    scale: 0.9;
+}
+
+.head{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+.CryptoTrading{
+    padding: 35px 15px 0 35px;
+    font-size: 102px; 
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 17px;
+    .text{
+        text-align: right;
+    .TetxGradient{
+        font-weight: bold;
+        @include gradient;
+            }
+        }
+    }
+}
+.text{
+    white-space: pre-line;
+    line-height: 100%;
+}
+.butandtext{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Trade{
+        padding: 35px 35px 17px 35px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: relative;
+    gap: 13px;
+    margin: 0 35px;
+    li{
+        padding: 38px 60px;
+        background-color: var(--cardsb);
+        border-radius: 30px;
+        text-align: center;
+        position: relative;
+        transition: 500ms;
+        img {
+            height: auto; 
+            object-fit: contain; 
+        }
+        .soon{
+            background-image:linear-gradient(45deg, #6D45B9,#B496EE);
+            position: absolute;
+            margin: 10px 10px 0 0;
+            right: 0;
+            top: 0;
+            padding: 2px 6px 5px 6px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            user-select: none;
+        }
+    }
+    li:hover{
+        box-shadow: 0 0 25px var(--bgrcolor4);
+        scale: 1.05;
+    }
+}
+
+@media (max-width: 1024px) {
+    .head{
+        display: flex;
+        justify-content: center;
+    }
+
+    .secbutton{
+        display: none;
+    }
+    .text{
+        text-align: center !important;
+        font-size: 55px;
+    }
+    video{
+        display: none;
+    }
+    nav{
+        ul{
+            display: none;
+        }
+    }
+    .list {
+        flex-direction: column;
+        justify-content: center;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+    .butandtext{
+        justify-content: center;
+    }
+    p{
+        text-align: center;
+    }
+    .Manage p span {
+        font-size: 50px !important;
+    }
+}
+.purpel{
+    background-color: var(--bgrcolor2);
+    position: absolute;
+    top: 1;
+    bottom: -15;
+    right: 0;
+    z-index: -1;
+    margin-left: auto;
+    width: 50%;
+    height: 250px;
+    animation: 'purpel' 2s infinite linear alternate;
+}

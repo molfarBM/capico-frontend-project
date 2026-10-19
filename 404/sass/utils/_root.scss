@@ -1,0 +1,127 @@
+:root{
+    --bgrcolor1: #fafafa;
+    --bgrcolor2: #5F29B7;
+    --bgrcolor3: #7061AA;
+    --bgrcolor4: #340E73;
+    --butbg: #5F29B7;
+    --cardsb: #0E0915;
+    --scrollc: #402E5C;
+    --c1: #7B708D;
+    --c2: #E9E3F4;
+    --c3: #7E63B9;
+    --c4: #8F889A;
+}
+@mixin link{
+    color: var(--c1);
+    text-decoration: none;
+    transition: 500ms;
+}
+@mixin button{
+    padding: 17px 37px;
+    font-size: 25px;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border-radius: 42px;
+    color: #fafafa; 
+    font-weight: bolder;
+}
+
+@mixin gradient{
+    color: transparent;    
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, var(--bgrcolor2), white);
+}
+
+@keyframes purpel{
+    from{
+        filter: blur(350px);
+    }
+    to{
+        filter: blur(150px);
+    }
+}
+
+@keyframes imgmoving{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes mainfade{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+        transform: translateX(-500px);
+        scale: 0.8;
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0) ;
+        transform: translateX(0px);
+        scale: 1;
+    }
+}
+
+@keyframes apperX{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+        scale: 0.8;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+        scale: 1;
+    }
+} 
+
+@keyframes apper-X{
+    0%{
+        opacity: 0;
+        transform: translateX(170px);
+        scale: 0.8;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+        scale: 1;
+    }
+} 
+
+@keyframes apperY{
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+        scale: 0.8;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        scale: 1;
+    }
+} 
+
+@keyframes scalebg {
+    0%{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
